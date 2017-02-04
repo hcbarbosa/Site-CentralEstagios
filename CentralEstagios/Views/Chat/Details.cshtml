@@ -1,0 +1,68 @@
+﻿@model List<CentralEstagios.Models.Observacao>
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    var item = Model[i];
+        
+    <h2>
+        @Html.ValueFor(modelItem => item.Vaga.Descricao)
+    </h2>
+    <h3>
+        @Html.ValueFor(modelItem => item.Vaga.Empresa)
+    </h3>
+    <b>@Html.ValueFor(modelItem => item.Vaga.EmailEmpresa)</b>
+    
+    <br />
+    
+    <h4>Conversa com @Html.ValueFor(modelItem => item.PerfilAluno.Nome)
+    </h4>
+    
+    <br />
+    
+    break;
+}
+
+
+<br />
+
+<form>
+    <fieldset class="chatFieldset">
+
+        <legend class="chatLegend">Chat</legend>
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+    
+        <div>
+            <b>@Html.DisplayFor(modelItem => item.PerfilDono.Nome)</b>
+        </div>
+        <div>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </div>
+    
+        @Html.Hidden("vagaId", item.Id)
+    
+        <br />
+    }
+
+    </fieldset>
+</form>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("mensagem") <input type="submit" value="Enviar" />
+}
+
+<br />
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    var item = Model[i];
+    
+    @Html.ActionLink("Voltar", "Index", "Chat", new { vagaId = item.VagaId }, null)
+
+    break;
+}

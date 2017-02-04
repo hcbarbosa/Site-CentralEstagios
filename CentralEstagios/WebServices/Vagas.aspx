@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vagas.aspx.cs" Inherits="CentralEstagios.WebServices.Vagas" %>

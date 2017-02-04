@@ -1,0 +1,38 @@
+﻿
+.labelTexto {
+    font-family: 'Myriad Pro', sans-serif;
+    width: 49%;
+    height: 30px;
+    text-align: right;
+    font-size: 20px;
+    float: left;
+}
+
+.labelInformacao {
+    font-family: 'Myriad Pro', sans-serif;
+    width: 49%;
+    height: 30px;
+    text-align: left;
+    font-size: 20px;
+    float: right;
+}
+
+.textoBeneficios{
+    font-family: 'Myriad Pro', sans-serif;
+    width: 49%;
+    height: auto;
+    display: flexbox;
+    text-align: right;
+    font-size: 20px;
+    float: left;
+}
+
+.informacaoBeneficios{
+    font-family: 'Myriad Pro', sans-serif;
+    width: 49%;
+    height: auto;
+    display: flexbox;
+    text-align: left;
+    font-size: 20px;
+    float: right;
+}

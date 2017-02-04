@@ -1,0 +1,233 @@
+﻿@model CentralEstagios.Models.Administracao.VagaCompleta
+
+@{
+    ViewBag.Title = "Nova Vaga";
+}
+
+@{
+    List<SelectListItem> listItemsTipo = new List<SelectListItem>();
+    listItemsTipo.Add(new SelectListItem
+         {
+             Text = "Estágio",
+             Value = "Estágio",
+             Selected = true
+         });
+    listItemsTipo.Add(new SelectListItem
+         {
+             Text = "CLT",
+             Value = "CLT"
+         });
+
+    List<SelectListItem> listItemsPeriodo = new List<SelectListItem>();
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Manhã",
+        Value = "Manhã",
+        Selected = true
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Tarde",
+        Value = "Tarde"
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Noite",
+        Value = "Noite"
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Manhã e Tarde",
+        Value = "Manhã e Tarde"
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Tarde e Noite",
+        Value = "Tarde e Noite"
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Manhã ou Tarde",
+        Value = "Manhã ou Tarde"
+    });
+    listItemsPeriodo.Add(new SelectListItem
+    {
+        Text = "Tarde ou Noite",
+        Value = "Tarde ou Noite"
+    });
+    }
+
+<h2>Nova Vaga</h2>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Vaga</legend>
+
+        @* ---------------------------- Criando vaga ------------------------ *@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Descricao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.Descricao)
+            @Html.ValidationMessageFor(model => model.Vaga.Descricao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.TelefoneEmpresa)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Vaga.TelefoneEmpresa, new { onkeypress = "MascaraTelefone(this)" })
+            @Html.ValidationMessageFor(model => model.Vaga.TelefoneEmpresa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Horario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.Horario)
+            @Html.ValidationMessageFor(model => model.Vaga.Horario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.PessoaContato)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.PessoaContato)
+            @Html.ValidationMessageFor(model => model.Vaga.PessoaContato)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Periodo)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Vaga.Periodo, listItemsPeriodo)
+            @Html.ValidationMessageFor(model => model.Vaga.Periodo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.TipoVaga)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Vaga.TipoVaga, listItemsTipo)
+            @Html.ValidationMessageFor(model => model.Vaga.TipoVaga)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Empresa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.Empresa)
+            @Html.ValidationMessageFor(model => model.Vaga.Empresa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Remuneracao)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Vaga.Remuneracao, new { onkeypress = "MascaraMoeda(this)", onblur = "SomenteNumeros(this)"})
+            @Html.ValidationMessageFor(model => model.Vaga.Remuneracao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.EmailEmpresa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.EmailEmpresa)
+            @Html.ValidationMessageFor(model => model.Vaga.EmailEmpresa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Vaga.Observacoes)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.Observacoes)
+            @Html.ValidationMessageFor(model => model.Vaga.Observacoes)
+        </div>
+
+        @* ---------------------------- Criando beneficio ------------------------ *@
+
+        <br />
+        <b>Auxílios</b>
+        <br />
+        <br />
+
+        <div class="editor-label">
+            @Html.CheckBoxFor(model => model.Vaga.Beneficio.AuxilioOdontologico)
+            Auxílio Odontológico
+        </div>
+
+        <div class="editor-label">
+            @Html.CheckBoxFor(model => model.Vaga.Beneficio.PlanoSaude)
+            Plano de Saúde
+        </div>
+
+        <div class="editor-label">
+            @Html.CheckBoxFor(model => model.Vaga.Beneficio.ValeAlimentacao)
+            Vale Alimentação
+        </div>
+
+        <div>
+            @Html.EditorFor(model => model.Vaga.Beneficio.ValeTransporte)
+            Vale Transporte
+        </div>
+
+        <br />
+
+        <div class="editor-label">
+            Outros
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vaga.Beneficio.Outros)
+            @Html.ValidationMessageFor(model => model.Vaga.Beneficio.Outros)
+        </div>
+
+        @* ------------------------------ Criando VagaCurso -----------------------------*@
+
+        <br />
+        <b>Cursos</b>
+        <br />
+        <br />
+
+        @for (int i = 0; i < Model.VagaCurso.Cursos.Count(); i++)
+        { 
+            <div class="editor-label">
+                @Html.EditorFor(modelItem => Model.VagaCurso.Cursos[i].EstaSelecionado)
+                @Html.ValueFor(modelItem => Model.VagaCurso.Cursos[i].Descricao)
+                @Html.HiddenFor(item => item.VagaCurso.Cursos[i].Id)
+                @Html.HiddenFor(item => item.VagaCurso.Cursos[i].Descricao)
+            </div>           
+        }
+
+        @* -------------------------- Criando VagaConhecimento ---------------------------- *@
+
+        <br />
+        <b>Conhecimentos</b>
+        <br />
+        <br />
+
+        @for (int i = 0; i < Model.VagaConhecimento.Conhecimentos.Count(); i++)
+        {            
+            <div class="editor-label">
+                @Html.EditorFor(modelItem => Model.VagaConhecimento.Conhecimentos[i].EstaSelecionado)
+                @Html.ValueFor(modelItem => Model.VagaConhecimento.Conhecimentos[i].Descricao)
+                @Html.HiddenFor(item => item.VagaConhecimento.Conhecimentos[i].Id)
+                @Html.HiddenFor(item => item.VagaConhecimento.Conhecimentos[i].Descricao)
+            </div>          
+        }
+
+        <p>
+            <input type="submit" value="Criar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>

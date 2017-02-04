@@ -1,0 +1,38 @@
+﻿@model CentralEstagios.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<section id="loginForm">
+
+    <h2>Entrar no Sistema</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Entrar no Sistema</legend>
+
+            <br />
+
+            <div class="editor-label">
+                Login
+            </div>
+            <div class="editor-label">
+                @Html.TextBox("Login")
+            </div>
+
+            <div class="editor-label">
+                Senha
+            </div>
+            <div class="editor-label">
+                @Html.Password("Password")
+            </div>
+
+            <input type="submit" value="Entrar" />
+        </fieldset>
+    }
+</section>

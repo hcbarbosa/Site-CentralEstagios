@@ -1,0 +1,62 @@
+﻿@model IList<CentralEstagios.Models.Vaga>
+
+@{
+    ViewBag.Title = "Vagas";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova Vaga", "Create")
+</p>
+<table>
+    <tr>
+        <th>Nome da Vaga
+        </th>
+        <th>Empresa
+        </th>
+        <th></th>
+    </tr>
+
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        var item = Model[i];
+        
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id }) |
+                @Html.ActionLink("Candidatos", "Index", "Candidato", new { vagaId = item.Id }, null) |
+                @Html.ActionLink("Mensagens", "Index", "Chat", new { vagaId = item.Id }, null) -
+                Não Lidas: 
+                @{
+        CentralEstagios.Repositorio.Repositorio<CentralEstagios.Models.Observacao> dbObservacao =
+            new CentralEstagios.Repositorio.Repositorio<CentralEstagios.Models.Observacao>();
+
+        List<CentralEstagios.Models.Observacao> mensagens = new List<CentralEstagios.Models.Observacao>();
+        List<CentralEstagios.Models.Observacao> filtradas = new List<CentralEstagios.Models.Observacao>();
+
+        mensagens = dbObservacao.Obter().Where(p => p.Status == 1).ToList();
+
+        filtradas.Clear();
+
+        foreach (var msg in mensagens)
+        {
+            filtradas = dbObservacao.Obter().Where(p => p.VagaId == item.Id && p.Status == 1).ToList();
+                        
+                    @filtradas.Count.ToString()
+
+            break;
+        }
+                }
+            </td>
+        </tr>
+    }
+
+</table>

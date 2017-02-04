@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notificacoes.aspx.cs" Inherits="CentralEstagios.WebServices.Notificacoes" %>

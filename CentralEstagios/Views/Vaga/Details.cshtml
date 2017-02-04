@@ -1,0 +1,156 @@
+﻿@model CentralEstagios.Models.Administracao.VagaCompleta
+
+@{
+    ViewBag.Title = @Html.ValueFor(model => model.Vaga.Descricao);
+}
+
+<h2>@Html.ValueFor(model => model.Vaga.Descricao)</h2>
+
+<br />
+
+<fieldset>
+    <legend>Vaga</legend>
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.TelefoneEmpresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.TelefoneEmpresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.Horario)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.Horario)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.PessoaContato)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.PessoaContato)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.Periodo)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.Periodo)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.TipoVaga)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.TipoVaga)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.Empresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.Empresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.Remuneracao)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.Remuneracao)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.EmailEmpresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.EmailEmpresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Vaga.Observacoes)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vaga.Observacoes)
+    </div>
+
+    <br />
+
+    <div class="display-field">
+        <b>Benefícios que esta vaga contém</b>
+    </div>
+    @{if (Model.Vaga.Beneficio.AuxilioOdontologico)
+      {
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.Vaga.Beneficio.AuxilioOdontologico)
+        </div>
+      }
+      if (Model.Vaga.Beneficio.PlanoSaude)
+      {
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.Vaga.Beneficio.PlanoSaude)
+        </div>
+      }
+      if (Model.Vaga.Beneficio.ValeAlimentacao)
+      {
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.Vaga.Beneficio.ValeAlimentacao)
+        </div>
+      }
+      if (Model.Vaga.Beneficio.ValeTransporte)
+      {
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.Vaga.Beneficio.ValeTransporte)
+        </div>
+      }
+      if (Model.Vaga.Beneficio.Outros != string.Empty)
+      {
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Vaga.Beneficio.Outros)
+        </div>
+      }}
+
+    <br />
+
+    <div class="display-field">
+        <b>Cursos aptos para esta vaga</b>
+    </div>
+    @foreach (var item in Model.VagaCurso.Cursos)
+    {
+        <div class="display-field">
+            @Html.ValueFor(modelItem => item.Descricao)
+        </div>
+    }
+
+    <br />
+
+    <div class="display-field">
+        <b>Conhecimentos necessários desta vaga</b>
+    </div>
+    @foreach (var item in Model.VagaConhecimento.Conhecimentos)
+    {
+        <div class="display-field">
+            @Html.ValueFor(modelItem => item.Descricao)
+        </div>
+    }
+
+</fieldset>
+<p>
+    @Html.ActionLink("Voltar", "Index")
+</p>

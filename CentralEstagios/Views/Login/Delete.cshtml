@@ -1,0 +1,32 @@
+﻿@model CentralEstagios.Models.Login
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir Usuário</h2>
+
+<h3>Você tem certeza que deseja excluir este login?</h3>
+<br />
+
+<fieldset>
+    <legend>Login</legend>
+
+    <div class="display-label">
+         <b>@Html.DisplayNameFor(model => model.Rm)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rm)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    
+    @Html.HiddenFor(model => model.Rm)
+    
+    @Html.AntiForgeryToken()
+    
+    <p>
+        <input type="submit" value="Excluir" /> |
+        @Html.ActionLink("Voltar", "List")
+    </p>
+}

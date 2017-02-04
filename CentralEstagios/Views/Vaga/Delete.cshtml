@@ -1,0 +1,107 @@
+﻿@model CentralEstagios.Models.Vaga
+
+@{
+    ViewBag.Title = "Excluir Vaga";
+}
+
+<h2>@Html.ValueFor(model => model.Descricao)</h2>
+
+<h3>Você tem certeza que deseja excluir esta vaga?</h3>
+
+<br />
+
+<fieldset>
+    <legend>Vaga</legend>
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.TelefoneEmpresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TelefoneEmpresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Horario)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Horario)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.PessoaContato)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PessoaContato)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Periodo)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Periodo)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.TipoVaga)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoVaga)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Empresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Empresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Remuneracao)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remuneracao)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.EmailEmpresa)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailEmpresa)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+        <b>@Html.DisplayNameFor(model => model.Observacoes)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Observacoes)
+    </div>
+
+    <br />
+</fieldset>
+@using (Html.BeginForm()) {
+    
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Id)
+    
+    <p>
+        <input type="submit" value="Excluir" /> |
+        @Html.ActionLink("Voltar", "Index")
+    </p>
+}

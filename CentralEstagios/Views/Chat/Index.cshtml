@@ -1,0 +1,38 @@
+﻿@model List<CentralEstagios.Models.Observacao>
+
+<h2>Mensagens</h2>
+
+<br />
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    var item = Model[i];
+    <div>
+        @Html.DisplayFor(modelItem => item.PerfilDono.Nome) | @Html.ActionLink("Chat", "Details", new { admId = ((CentralEstagios.Models.Login)Session["usuario"]).Rm, alunoId = item.AlunoId, donoMsg = item.DonoMsg, vagaId = item.VagaId })
+        - Não Lidas:
+        @{
+    CentralEstagios.Repositorio.Repositorio<CentralEstagios.Models.Observacao> dbObservacao =
+        new CentralEstagios.Repositorio.Repositorio<CentralEstagios.Models.Observacao>();
+
+    List<CentralEstagios.Models.Observacao> mensagens = new List<CentralEstagios.Models.Observacao>();
+    List<CentralEstagios.Models.Observacao> filtradas = new List<CentralEstagios.Models.Observacao>();
+
+    mensagens = dbObservacao.Obter().Where(p => p.Status == 1).ToList();
+
+    filtradas.Clear();
+
+    foreach (var msg in mensagens)
+    {
+        filtradas = dbObservacao.Obter().Where(p => p.VagaId == item.VagaId && p.Status == 1 && p.AlunoId == item.AlunoId).ToList();
+                     
+        @filtradas.Count.ToString()
+
+        break;
+    }
+        }
+    </div>
+}
+
+<br />
+
+@Html.ActionLink("Voltar", "Index", "Vaga")

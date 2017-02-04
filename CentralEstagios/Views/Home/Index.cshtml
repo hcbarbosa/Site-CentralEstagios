@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Central de Estágios";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <br />
+                <h2>Unidade: @ViewBag.Message</h2>
+            </hgroup>
+
+                  @{  if (Session["usuario"] != null)
+                      {
+                          var usuario = ((CentralEstagios.Models.Login)Session["usuario"]).Rm;
+                           <h3 style="color: white">Bem vindo, @Html.DisplayName(usuario)!</h3>
+                      }
+                      else
+                      {
+                          <h3 style="color: white">Por favor, logue-se para administrar a central de estágios!</h3>
+                      }
+                  }
+        </div>
+    </section>
+}
+<h3>Contato:</h3>
+<ol class="round">
+    <li >
+        Rua Fernandópolis, 2510 - Eldorado <br />
+15043-020 - São José do Rio Preto <br />
+São Paulo - Brasil
+        </li> <li  >
+estagios@fatecriopreto.edu.br 
+ </li> <li >(17) 3219-1433 - Ramal 213
+     </li>
+</ol>

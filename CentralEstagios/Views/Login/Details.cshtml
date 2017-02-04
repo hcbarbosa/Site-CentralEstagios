@@ -1,0 +1,33 @@
+﻿@model CentralEstagios.Models.Login
+
+@{
+    ViewBag.Title = @Html.ValueFor(model => model.Rm);
+}
+
+<h2>@Html.ValueFor(model => model.Rm)</h2>
+
+<br />
+
+<fieldset>
+    <legend>Login</legend>
+
+    <div class="display-label">
+         <b>@Html.DisplayNameFor(model => model.Rm)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rm)
+    </div>
+
+    <br />
+
+    <div class="display-label">
+         <b>@Html.DisplayNameFor(model => model.Senha)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Senha)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { rm=Model.Rm }) |
+    @Html.ActionLink("Voltar", "List")
+</p>

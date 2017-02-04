@@ -1,0 +1,24 @@
+﻿@model CentralEstagios.Models.Curso
+
+@{
+    ViewBag.Title = @Html.ValueFor(model => model.Descricao);
+}
+
+<h2>@Html.ValueFor(model => model.Descricao)</h2>
+
+<fieldset>
+    <legend>Curso</legend>
+
+    <br />
+
+    <div class="display-label">
+         <b>@Html.DisplayNameFor(model => model.Descricao)</b>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

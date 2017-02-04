@@ -1,0 +1,52 @@
+﻿@model CentralEstagios.Models.ConhecimentoCurso
+
+@{
+    ViewBag.Title = "Novo Conhecimento";
+}
+
+<h2>Novo Conhecimento</h2>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+
+    //@Html.HiddenFor(model => model.Curso.Descricao)
+
+    <fieldset>
+        <legend>ConhecimentoCurso</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Conhecimento.Descricao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Conhecimento.Descricao)
+            @Html.ValidationMessageFor(model => model.Conhecimento.Descricao)
+        </div>
+
+        @for (int i = 0; i < Model.Cursos.Count(); i++)
+        {
+            <div class="editor-label">
+                @Html.EditorFor(model => model.Cursos[i].EstaSelecionado)
+                @Html.ValueFor(item => item.Cursos[i].Descricao)
+                @Html.HiddenFor(item => item.Cursos[i].Id)
+                @Html.HiddenFor(item => item.Cursos[i].Status)
+                @Html.HiddenFor(item => item.Cursos[i].Descricao)
+            </div>
+        }
+
+        <p>
+            <input type="submit" value="Criar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

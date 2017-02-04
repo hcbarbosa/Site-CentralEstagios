@@ -1,0 +1,53 @@
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\CentralEstagios.dll
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\CentralEstagios.pdb
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\EntityFramework.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\EntityFramework.SqlServer.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\Newtonsoft.Json.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Net.Http.Formatting.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.Helpers.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.Http.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.Http.WebHost.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.Mvc.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.Razor.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.Deployment.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.Razor.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\WebMatrix.Data.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\Microsoft.Web.WebPages.OAuth.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\WebMatrix.WebData.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.AspNet.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.Core.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OAuth.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OpenId.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.csprojResolveAssemblyReference.cache
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.dll
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.pdb
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.Resources.resources
+c:\users\victor\documents\visual studio 2012\Projects\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.csproj.GenerateResource.Cache
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.csprojResolveAssemblyReference.cache
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.Resources.resources
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.csproj.GenerateResource.Cache
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.dll
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\CentralEstagios.dll
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\CentralEstagios.pdb
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\EntityFramework.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\EntityFramework.SqlServer.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\Newtonsoft.Json.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.Helpers.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.Mvc.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.Razor.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\System.Web.WebPages.Razor.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\WebMatrix.Data.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\WebMatrix.WebData.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.Core.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\hanna\Downloads\Sitefinalizado\CentralEstagios\CentralEstagios\obj\Debug\CentralEstagios.pdb
